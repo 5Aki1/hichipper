@@ -8,14 +8,10 @@ suppressMessages(suppressWarnings(library(data.table)))
 suppressMessages(suppressWarnings(library(reshape2)))
 
 args <- commandArgs(trailingOnly = TRUE)
-# resfile <- args[1]
-# treatmentfile <- args[2]
-# backgroundfile <- args[3]
-# outdir <- args[4]
-resfile <- "hichipper/MboI_resfrag_hg38.bed"
-treatmentfile <- "hichipper/22RV1_REP1_temporary_treat_pileup.bdg"
-backgroundfile <- "hichipper/22RV1_REP1_temporary_control_lambda.bdg"
-outdir <- "hichipper"
+resfile <- args[1]
+treatmentfile <- args[2]
+backgroundfile <- args[3]
+outdir <- args[4]
 K <- 1000000 # Number of loci to sample from 
 
 # Import Restriction Fragments / Convert to GRanges
